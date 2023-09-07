@@ -1,0 +1,11 @@
+<h1>Lista de mensagens</h1>
+{{#each mensagens}}
+<div class="mensagem"><h1>{{nome}}</h1>
+<p>{{email}}</p>
+<p>{{telefone}}</p>
+<p>{{conteudo}}</p>
+
+
+<a href="/delete/{{id}}"><button>Deletar</button></a></div>
+<br>
+{{/each}}
