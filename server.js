@@ -50,7 +50,7 @@ app.get('/login', (req,res)=> {
     res.render('login')
 })
 
-app.post('/logar', async (req,res)=> {
+app.post('/mensagens', async (req,res)=> {
     const logar =  await Adm.findOne({
         attributes: ['user', 'password'],
         where: {
@@ -60,10 +60,7 @@ app.post('/logar', async (req,res)=> {
 
         
     if(logar === null) {
-        return res.status(400).json({
-            erro: true,
-            mensagem: "Dados incorretos"
-        })
+        res.redirect('/login')
     } else {
         Mensagem.findAll().then((mensagens)=>{
             res.render('mensagens', {mensagens: mensagens})
