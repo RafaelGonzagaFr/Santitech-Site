@@ -1,7 +1,38 @@
 <body>
-    <form action="/logar" method="post">
-    <input type="text" name="user" id="user">
-    <input type="password" name="password" id="password">
-    <button type="submit">Logar</button>
-    </form>
+
+
+<section class="py-5">
+        <div class="container px-5">
+            <!-- Contact form-->
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+
+                    <h1 class="fw-bolder">Coloque seus dados de acesso!</h1>
+                    <p class="lead fw-normal text-muted mb-0">Acesso a aba administrativa</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form id="contactForm" action="/logar" method="POST">
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input name="user" class="form-control" id="user" type="user" placeholder="Usuário" required />
+
+                            </div>
+                            <!-- Senha input-->
+                            <div class="form-floating mb-3">
+                                <input name="password" class="form-control" id="password" type="password" placeholder="Senha" required />
+
+                            </div>
+
+                            <!-- Submit Button-->
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>

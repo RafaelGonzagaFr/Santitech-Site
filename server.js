@@ -71,13 +71,6 @@ app.post('/logar', async (req,res)=> {
     }
 })
 
-app.get('/delete/:id', (req,res)=> {
-    Mensagem.destroy({where: {'id': req.params.id}}).then(()=>{
-        res.redirect('/')
-    }).catch((err)=>{
-        res.send("Deu merda")
-    })
-})
 
 
 app.listen(3000); 
